@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Certificate Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      background:#f0f0f0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
+    .certificate{
+      width:1000px;
+      height:700px;
+      background:#fff;
+      position:relative;
+      box-shadow:0 0 15px rgba(0,0,0,0.2);
+      padding:40px 60px;
+      overflow:hidden;
+    }
+    /* Red & navy corner shapes */
+    .left-bar{
+      position:absolute;
+      top:0;
+      left:0;
+      width:180px;
+      height:100%;
+      background:#b90e2d;
+    }
+    .left-bar::after{
+      content:"";
+      position:absolute;
+      top:0;
+      left:160px;
+      width:40px;
+      height:100%;
+      background:#18212f;
+    }
+    .top-corner, .bottom-corner{
+      position:absolute;
+      width:200px;
+      height:200px;
+      background:#18212f;
+      clip-path:polygon(100% 0, 0 0, 100% 100%);
+    }
+    .top-corner{top:0; right:0;}
+    .bottom-corner{bottom:0; left:0; transform:rotate(180deg);}
+
+    /* Borders */
+    .border-lines{
+      position:absolute;
+      top:40px;left:40px;right:40px;bottom:40px;
+      border:2px solid #c21f2d;
+    }
+    .border-lines::before{
+      content:"";
+      position:absolute;
+      top:-20px; right:-20px;
+      width:200px; height:100px;
+      border:2px solid #c21f2d;
+      border-left:none; border-bottom:none;
+    }
+
+    /* Content */
+    .content{
+      position:relative;
+      text-align:center;
+      margin-top:40px;
+    }
+    .content h1{
+      font-size:36px;
+      margin:0;
+      letter-spacing:2px;
+    }
+    .content h2{
+      font-size:20px;
+      margin:10px 0;
+      color:#444;
+    }
+    .frame-text{
+      display:inline-block;
+      border:2px solid #c21f2d;
+      padding:5px 15px;
+      margin-top:20px;
+      font-weight:600;
+      color:#444;
+    }
+    .recipient{
+      margin-top:20px;
+      font-size:26px;
+      font-weight:700;
+    }
+    .course{
+      margin-top:20px;
+      font-size:22px;
+      font-weight:700;
+    }
+    .footer{
+      position:absolute;
+      bottom:60px;
+      left:60px;
+      right:60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+    }
+    .sig{
+      text-align:left;
+    }
+    .sig-line{
+      width:200px;
+      height:40px;
+      border-bottom:1px solid #000;
+      margin-bottom:5px;
+    }
+    .sig small{font-size:12px;}
+    .date{
+      text-align:right;
+      font-size:14px;
+      font-weight:700;
+    }
+    .logos{
+      text-align:center;
+      flex-grow:1;
+    }
+    .logos img{
+      height:50px;
+      margin:0 10px;
+    }
+    .address{
+      font-size:11px;
+      color:#444;
+      margin-top:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <div class="left-bar"></div>
+    <div class="top-corner"></div>
+    <div class="bottom-corner"></div>
+    <div class="border-lines"></div>
+
+    <div class="content">
+      <h1>CERTIFICATE</h1>
+      <h2>OF PARTICIPATION</h2>
+      <div class="frame-text">This is to certify that</div>
+      <div class="recipient">MAHNOOR ASIM</div>
+      <div style="margin-top:10px;">has Successfully Completed the One Day Workshop on</div>
+      <div class="course">Article Writing</div>
+    </div>
+
+    <div class="footer">
+      <div class="sig">
+        <div class="sig-line"></div>
+        <small>CEO PNY Trainings<br>(Wahab Yunus)</small>
+      </div>
+      <div class="logos">
+        <img src="https://dummyimage.com/80x50/ccc/000&text=PNY" alt="PNY logo">
+        <img src="https://dummyimage.com/80x50/ccc/000&text=PNY" alt="PNY logo">
+        <img src="https://dummyimage.com/80x50/ccc/000&text=SDC" alt="SDC logo">
+        <div class="address">Office #03, Level #02, Arfa Software Technology Park,<br>Ferozpur Road Lahore, Pakistan</div>
+      </div>
+      <div class="date">28th Sep 2020<br><small>DATE</small></div>
+    </div>
+  </div>
+</body>
+</html>
